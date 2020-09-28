@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1 id="output">OK</h1>
+    </div>
+    <fieldset> <legend>Identification</legend>
+    <form id="zepizzaForm">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Utilisateur</label>
+          <input type="text" class="form-control" id="user"  name="user" placeholder="Enter utilisateur">
+          <p id="err-user"></p>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+          <p id="err-pass"></p>
+        </div>
+    </fieldset>
+
+        <fieldset>
+           <legend> Commande</legend>
+           <p>Taille</p>
+
+<div>
+  <input type="radio" id="S" name="size" value="S">
+  <label for="S">S</label>
+</div>
+
+<div>
+  <input type="radio" id="M" name="size" value="M">
+  <label for="M">M</label>
+</div>
+
+<div>
+  <input type="radio" id="L" name="size" value="L">
+  <label for="L">L</label>
+</div>
+
+<div>
+    <input type="radio" id="xxL" name="size" value="xxL">
+    <label for="xxL">xxL</label>
+    <p id="err-size"></p>
+  </div>
+<p>Ingredients</p>
+
+<div>
+  <input type="checkbox" id="Tomate" name="toppings[]"
+         checked>
+  <label for="Tomate">Tomate</label>
+</div>
+
+<div>
+  <input type="checkbox" id="Oeuf" name="toppings[]">
+  <label for="Oeuf">Oeuf</label>
+</div>
+<input type="checkbox" id="Mozarella" name="toppings[]">
+<label for="scales">Mozarella</label>
+</div>
+
+<div>
+<input type="checkbox" id="Jambon" name="toppings[]">
+<label for="Jambon">Jambon</label>
+<p id="err-topping"></p>
+</div>
+<label for="pet-select">Choisir mode de paiement</label>
+
+<select name="payment" id="payment">
+    <option value="">--Veuillez choisir--</option>
+    <option value="cb">CB</option>
+    <option value="esp">ESPECE</option>
+    <option value="tr">TR</option>
+    <p id="err-payment" class="error"></p>
+</select>
+
+        </fieldset>
+        <button type="button" id="bt-check">Envoyer</button>
+      </form>
+</body>
+<script src="check.js">
+</script>
+</html>
+
