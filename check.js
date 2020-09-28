@@ -65,6 +65,10 @@ var optionSelectionne = document.getElementById("payment").selectedindex;
 console.log(optionSelectionne);
 var optionPaiement = laListe[optionSelectionne].value;
 
+if (optionPaiement == -1) {
+    document.getElementById("err-payment").innerHTML = "SVP saisissez un moyen de paiement !";
+    validationFinale = false;
+}
 //en 1 instruction
 //var optionPaiement= document.getElementById("payment").options[document.getElementById("payment").selectedindex].value;
 
